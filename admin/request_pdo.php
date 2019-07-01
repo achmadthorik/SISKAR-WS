@@ -3,7 +3,7 @@ $provider = 'mysql';
 $hostname = 'localhost';
 $username = 'root';
 $password = '';
-$database = 'kebakaran';
+$database = 'kebakaran2';
 
 header("Content-Type: application/json", true);
 

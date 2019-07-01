@@ -6,9 +6,23 @@ $asap = $_GET['asap'];
 $api = $_GET['api'];
 echo $asap,$api;
 
-if ($asap == 1 && $api == 1) {
+if ($api == 1) {
   $status = 'KEBAKARAN';
-}else{
+}
+elseif ($asap > 450 && $api == 0) {
+$status = "TERDETEKSI ASAP";
+}
+
+/*
+elseif ($asap > 200 && $asap < 5000) {
+	$status
+}*/
+
+
+
+
+
+else{
   $status = 'AMAN';
 }
   

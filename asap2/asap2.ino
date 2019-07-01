@@ -19,7 +19,7 @@ HTTPClient http;
 float suhu;
 String payload;
 
-String url = "http://192.168.0.106/kebakaran/admin/add_data.php?asap=";
+String url = "http://192.168.0.106/kebakaran2/admin/add_data.php?asap=";
 
 int bacasensor = 0;
 int sensorThres = 230;
@@ -64,9 +64,9 @@ void loop() {
     api=1;
     digitalWrite(led1, HIGH);
     digitalWrite(buzzer, HIGH);
-    delay(1000);
+    delay(2000);
     digitalWrite(buzzer,LOW);
-   // delay(50);
+    delay(50);
     }
     else
     {

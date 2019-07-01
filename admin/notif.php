@@ -10,31 +10,38 @@ require_once './layout/header.php';
             <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-6">
                 <div class="tile-stats">
                     <div class="icon">
-                        <i class="fa fa-download"></i>
+                        <i class="glyphicon glyphicon-fire"></i>
                     </div>
                     <div class="count" data-api></div>
                     <h3>API</h3>
                 </div>
             </div>
+
+
              <div class="animated flipInY col-lg-3 col-md-3 col-sm-3 col-xs-6">
                 <div class="tile-stats">
                     <div class="icon">
-                        <i class="fa fa-upload"></i>
+                        <i class="glyphicon glyphicon-tint"></i>
                     </div>
                     <div class="count" data-asap></div>
                     <h3>ASAP</h3>
                 </div>
             </div>
+
+
             <div class="animated flipInY col-lg-6 col-md-3 col-sm-3 col-xs-6">
                 <div class="tile-stats">
                     <div class="icon">
-                        <i class="fa fa-upload"></i>
+                        <i class="glyphicon glyphicon-warning-sign"></i>
                     </div>
                     <div class="count" data-status></div>
                     <h3>STATUS</h3>
                 </div>
             </div>
         </div>
+
+
+
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
@@ -44,12 +51,19 @@ require_once './layout/header.php';
                 </div>
                 <div class="x_content">
                     <div class="alert alert-warning" data-alert>
+
                         <h1><i class="fa fa-warning"></i> Warning!</h1>
+
+
+                 
+
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<audio loop src="alert2.mp3" data-audio></audio>
 
 <?php include "layout/footer.php"; ?>

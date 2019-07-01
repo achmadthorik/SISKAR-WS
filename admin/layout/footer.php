@@ -95,7 +95,7 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-            let refreshInterval = 5000; // Dalam milisecond. 5000ms = 5 detik
+            let refreshInterval = 1050; // Dalam milisecond. 5000ms = 5 detik
             let xhr;
 
             requestData();
@@ -113,15 +113,20 @@
 
                     let warning = '<h1><i class="fa fa-warning"></i> Warning!</h1>';
                     let $alert   = $('div[data-alert]');
+                    let audio = $('audio[data-audio]')[0];
 
                     if (data.api === '1') {
                         $alert.attr('class', 'alert alert-danger');
                         $alert.html(warning + 'TERJADI KEBAKARAN PADA PUKUL <h2>' + data.waktu + '</h2>');
-                    } else if (data.api === '0' && data.asap === '1') {
+                        audio.play();
+
+                    } else if (data.api === '0' && data.asap > '450') {
                         $alert.attr('class', 'alert alert-warning');
-                        $alert.html(warning + 'TERDETEKSI ASAP PADA PUKUL <h2>' + data.waktu + '</h2>');
+                        $alert.html(warning + 'TERDETEKSI ASAP PADA PUKUL <h2>' +data.waktu+ '</h2>');
+                        audio.play();
                     } else {
                         $alert.attr('class', 'hide');
+                        audio.pause();
                     }
                 })
                 .fail(function(data) {
